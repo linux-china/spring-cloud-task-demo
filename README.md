@@ -1,7 +1,12 @@
 Spring Cloud Task
 =================
-Spring Cloud Task就是执行一个短的任务，也就是启动JVM进程执行，然后退出程序，
-将执行任务的结果记录下来。
+Spring Cloud Task就是执行一个短的任务，也就是启动JVM进程后执行逻辑，最后JVM退出，将执行任务的结果记录下来。
+
+### 为何要Cloud Task
+
+* 和Schedule和Cron不一样： 短时间的定是运行可以理解为stream，poll模型
+* 节约成本： 每半小时运行一次，直接开vm然后销毁
+
 
 ### 使用
 
